@@ -10,17 +10,21 @@ def fetch(pokemonid):
 
 def battle(pokemon1, pokemon2):
     print("Let the Pokemon battle begin! ================")
-    print("It's " + pokemon1['name'] + " vs " + pokemon2['name'])
+    print("Players:") ## CHANGED FORMATTING
+    print("The amazing " + pokemon1['name'] + "...")
+    print("and the legendary" + pokemon2['name'] + "!")
+    print()
 
     for stat in ['hp', 'attack', 'defense', 'speed', 'sp_attack', 'sp_defense']:
         if pokemon1[stat] > pokemon2[stat]:
-            print(pokemon1['name'] + " has the advantage in " + stat)
+            print(pokemon1['name'] + " has the advantage in " + stat + "!") ## ADDED PUNCTUATION
         elif pokemon2[stat] > pokemon1[stat]:
-            print(pokemon2['name'] + "'s " + stat + " is superior")
+            print(pokemon2['name'] + "'s " + stat + " is superior!!!!") ## ADDED PUNCTUATION
 
     winner = random.randrange(2)
-    if winner == 0: print("Battle results: " + pokemon1['name'])
-    if winner == 1: print("Battle results: " + pokemon2['name'])
+    print()
+    if winner == 0: print("Battle results... " + pokemon1['name'] + "!") ## CHANGED FORMATTING
+    if winner == 1: print("Battle results... " + pokemon2['name'] + "!") ## CHANGED FORMATTING
 
 def main():
     # Fetch two pokemon from the MongoDB database
