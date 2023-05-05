@@ -25,11 +25,13 @@ with open('pokemon.csv', 'r') as csvfile:
             'speed': row['speed'],
             'sp_attack': row['sp_attack'],
             'sp_defense': row['sp_defense'],
-            'abilities': row['abilities']
+            'abilities': row['abilities'][1:-1]
         }
         json_pokemon_data.append(pokemon_data)
 
     pokemonColl.insert_many(json_pokemon_data)
     #pokemonColl.delete_many({})
     print("I found " + str(pokemonColl.count_documents({})) + " pokemon")
+
+    #mongoexport --db=pokemondb --collection=imported_pokemon_data --out=pokemon_data.json
 
