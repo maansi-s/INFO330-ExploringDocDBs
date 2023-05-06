@@ -12,7 +12,7 @@ def battle(pokemon1, pokemon2):
     print("Let the Pokemon battle begin! ================")
     print("Players:") ## CHANGED FORMATTING
     print("The amazing " + pokemon1['name'] + "...")
-    print("and the legendary" + pokemon2['name'] + "!")
+    print("and the legendary " + pokemon2['name'] + "!")
     print()
 
     for stat in ['hp', 'attack', 'defense', 'speed', 'sp_attack', 'sp_defense']:
