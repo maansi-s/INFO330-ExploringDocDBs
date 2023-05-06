@@ -1,7 +1,3 @@
-import sqlite3
-import sys
-import json
-import csv
 from pymongo import MongoClient
 
 mongoClient = MongoClient("mongodb://localhost/pokemon")
